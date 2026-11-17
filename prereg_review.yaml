@@ -1,0 +1,29 @@
+# Pre-registration: automated second review of meaning. Written and hashed BEFORE the review runs.
+mission: DEBRIEF-math-erdos1133
+dated: '2026-11-17'
+by: Nervous Machine (automated second review, claude-opus-5-5)
+question: Does each formal statement say what the problem asks? A second reading beside Palomar's model judgement, not a human
+  reading.
+model: claude-opus-5-5
+via: Claude Code (claude -p, local login, no tools)
+inputs:
+  problem: 0e2fe4844f2de37740467271c7024c742a2859c30adfce17c4b84fd3326e0bcf
+  google-deepmind/formal-conjectures FormalConjectures/ErdosProblems/1133.lean: d8106263d4ee66714043c2526e963c07a4d3910b1b9355a932d4b30863531b90
+sources:
+  problem: https://www.erdosproblems.com/1133
+  google-deepmind/formal-conjectures FormalConjectures/ErdosProblems/1133.lean: https://raw.githubusercontent.com/google-deepmind/formal-conjectures/e028240a61822d970c933f4656f51da025cf200b/FormalConjectures/ErdosProblems/1133.lean
+problem_text_verbatim: true
+rules:
+  R1: the review reads only the inputs hashed above; it refuses to run if any hash has changed
+  R2: every difference is recorded, harmless or not, with the formal text quoted exactly
+  R3: a difference marked yes or uncertain is listed for a maintainer, who decides whether to open an anomaly and send it
+    upstream
+  R4: standing is unchanged by construction; the review is a reading, not a check
+independence:
+  reviewer_family: Claude
+  claimant_ai_listed:
+  - GPT-6 (as listed by the claimant)
+  same_family_as_a_claimant_tool: false
+predictions:
+  P1: at least one convention or encoding difference will need a sentence
+  P2: no difference will be marked yes unless the record already flags one
