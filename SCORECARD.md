@@ -19,6 +19,7 @@ Record quality: full ledger. Opened at tier zero: the claim and its artifacts ar
 |---|---|---|---|---|---|
 | 0 | 2026-04-29 to 2026-11-14 |  | replay | no | admitted |
 | external-2026-11-17 | 2026-11-17 | None | replay | no | admitted |
+| review-2026-11-17 | 2026-11-17 | Nervous Machine (automated second review, claude-opus-5-5 via Claude Code) | trace | yes | learned |
 
 ## Gaps, in the order that would settle things fastest
 

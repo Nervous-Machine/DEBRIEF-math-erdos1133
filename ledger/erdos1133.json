@@ -155,6 +155,51 @@
    "spoken": "What other registries showed on 2026-11-17. Palomar: no entry found. DeepMind formal-conjectures: main statement marked solved, with no formal proof linked. erdosproblems.com: status open. None of these is a named human reading of the statement.",
    "finding_ids": [],
    "gap_ids": []
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "mission_id": "erdos1133-2026-11",
+   "pod": "DEBRIEF-math-erdos1133",
+   "audience": "briefing",
+   "created_by": "DEBRIEF/tools/semantic_review.py",
+   "created_at": "2026-11-17T23:02:10Z",
+   "provenance": {
+    "source": "automated review by claude-opus-5-5 via Claude Code, request session df66b214-31da-44ea-895a-d68faced6403"
+   },
+   "kind": "trace",
+   "cycle": "review-2026-11-17",
+   "dated": "2026-11-17",
+   "by": "Nervous Machine (automated second review, claude-opus-5-5 via Claude Code)",
+   "preregistered": {
+    "commit": "prereg_review.yaml",
+    "results": [
+     "trace/DEFINITIONAL-TRACE.md",
+     "trace/second-review.json"
+    ],
+    "question": "Does each formal statement say what the problem asks? A second reading beside Palomar's model judgement, not a human reading.",
+    "rule": "the review reads only the inputs hashed above; it refuses to run if any hash has changed; every difference is recorded, harmless or not, with the formal text quoted exactly; a difference marked yes or uncertain is listed for a maintainer, who decides whether to open an anomaly and send it upstream; standing is unchanged by construction; the review is a reading, not a check",
+    "predictions": [
+     "P1: at least one convention or encoding difference will need a sentence",
+     "P2: no difference will be marked yes unless the record already flags one"
+    ],
+    "before_data": true
+   },
+   "outcome": {
+    "verdict": "learned",
+    "numbers": {
+     "statements_compared": 1,
+     "differences_recorded": 7,
+     "possibly_meaning_changing": 1,
+     "checklist_items": 5,
+     "confidence": "high",
+     "human_review": false,
+     "same_family_as_a_claimant_tool": false
+    },
+    "misses": []
+   },
+   "spoken": "An automated second review by claude-opus-5-5 via Claude Code compared the problem as posed with 1 formal statement(s) and recorded 7 difference(s), 1 of which might change the meaning. It is a reading, not a human signature.",
+   "finding_ids": [],
+   "gap_ids": []
   }
  ],
  "findings": [],
