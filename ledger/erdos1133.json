@@ -71,6 +71,33 @@
      "kind": "formal statement (third party)",
      "ref": "github.com/google-deepmind/formal-conjectures FormalConjectures/ErdosProblems/1133.lean at e028240a61822d970c933f4656f51da025cf200b"
     }
+   ],
+   "tooling": [
+    {
+     "by": "Jia-Qi Yang",
+     "tier": "unknown",
+     "basis": "stated by the claimant as GPT-6 without a variant or tier; GPT-6 Astra reached Plus and higher plans from 3 to 4 September, the Pro variant on Pro, Business and Enterprise",
+     "models": [
+      {
+       "model": "GPT-6 Astra",
+       "id": "gpt-6-astra",
+       "vendor": "OpenAI",
+       "public_release": "2026-09-03",
+       "tiers_at_release": [
+        "subscription",
+        "subscription-pro",
+        "api"
+       ],
+       "public_at_the_time": "yes",
+       "note": "public 10 days before the date submitted; the work's start is not stated"
+      }
+     ],
+     "work": {
+      "to": "2026-09-13"
+     },
+     "duration": "not stated",
+     "compute": "not stated"
+    }
    ]
   }
  ],

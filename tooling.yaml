@@ -1,0 +1,12 @@
+# Tooling disclosure for this record's claim(s): which models, at what access tier, over what time, as stated by the
+# claimant or inferred from the public record (the basis says which). Read by DEBRIEF/tools/tooling.py into the ledger.
+# Tier words and model release dates: DEBRIEF/tools/models.yaml. Nothing here is a standing.
+claims:
+- by: Jia-Qi Yang
+  models:
+  - gpt-6-astra
+  tier: unknown
+  basis: stated by the claimant as GPT-6 without a variant or tier; GPT-6 Astra reached Plus and higher plans from
+    3 to 4 September, the Pro variant on Pro, Business and Enterprise
+  work:
+    to: '2026-09-13'
