@@ -1,11 +1,57 @@
-# Pre-registration for the first rerun of this claim's Lean development. Fill in, then register BEFORE running:
-#   python3 <DEBRIEF>/tools/prereg.py register prereg_rerun.yaml   (writes prereg_rerun.yaml.sha256; commit both)
+# Pre-registration, cycle "rerun-2026-11-27": independent rerun of a third-party Lean formalization of Erdős 1133.
+# Written 2026-11-27T02:15Z, BEFORE any build or check below ran. Tooling installation in the VM (elan toolchain, Mathlib cache
+# download) is not a check and may precede the checks. Amendments go below a marker line; this body is never edited.
+#
+# Occasion. The record's first gap (EG1) says no formal deduction exists for the claimed proof. On 2026-11-26, while
+# scanning targets for DEBRIEF-math-rooms build 6, the registrar found a complete Lean formalization of the Erdős 1133
+# statement: github.com/peilinliu66-dev/jsp940-erdos1133-formalization at commit 83ab7d38a4abbdfc1c9509cfbb7b49514cca217e
+# (one commit, 2026-09-28, Apache-2.0, "with Codex AI assistance"), ingested into competemath/tengoku on 2026-11-20 as
+# 325 theorems. Its README says the endpoint Erdos1133.erdos_1133 passed local checking on 2026-09-28 on the standard
+# three axioms, and that its sources are Yang's manuscript (the artifact this record pins), an unsigned ulam.ai draft of
+# 2026-04-29, and Olevskii–Ulanovskii (2018). The formalizer is not the claimant. This cycle reruns it here.
+#
+# What a pass means and does not mean. A pass shows that the formal-conjectures statement of Erdős 1133 has a kernel-
+# checked proof on the standard axioms, rerun by a party independent of both the claimant and the formalizer. It does
+# not show that Yang's written proof is correct, or that the formalization follows Yang's route: the formalizer names
+# two written sources and its own analytic route. EG1 asks for a formal deduction of the main theorem with a third-party
+# statement; the statement here is formal-conjectures', which is third-party. EG2 (a human reading of Yang's proof) is
+# untouched by this cycle.
+
 mission: DEBRIEF-math-erdos1133
-by: "<your name as you want it recorded>"
-dated: "<YYYY-MM-DD>"
-question: "Does the claimant's Lean development build at the pinned commit on an independent machine, with no sorry or admit, and which axioms does the main theorem use?"
-rule: "All checks below pass as predicted; any miss is recorded under misses."
+cycle: "rerun-2026-11-27"
+by: "Nervous Machine (Heidi Bennett; Claude Fable 5.1 as registrar and operator)"
+dated: "2026-11-27"
+question: >
+  Does peilinliu66-dev's Lean formalization of Erdős 1133 build at its pinned commit on an independent machine with
+  no escape hatches, do its two endpoints rest on the standard three axioms only, and is its main theorem's statement
+  identical to formal-conjectures' statement of the problem?
+
+environment:
+  host: "Heidi Bennett's Mac; nothing from the repository runs on the host"
+  vm: "Lima VM primegaps (Linux); the repository is cloned under ~/untrusted/erdos1133/repo and everything runs there"
+  source: "github.com/peilinliu66-dev/jsp940-erdos1133-formalization at 83ab7d38a4abbdfc1c9509cfbb7b49514cca217e (49 .lean files, 7,506 lines, of which 19 modules are reused from the same author's Erdős 1152 repository at 5f77404a per REUSED_MODULES.json)"
+  toolchain: "leanprover/lean4:v4.33.0 as pinned by lean-toolchain; Mathlib db584cd6d46c92f209a44c0f1c829460d327499d as pinned by lakefile.toml and lake-manifest.json"
+  reference_statement: "google-deepmind/formal-conjectures FormalConjectures/ErdosProblems/1133.lean at 9097e2f9 (the text also pinned as DEBRIEF-math-rooms rooms/Challenge_1133.lean, sha256 c7cdb3c337fa6380cb6783ed79c87c650719f9a43524a0d8bc932e8b2e601f7b)"
+  record: "exit codes, wall time, peak memory and full logs for every check go in cycles/rerun-2026-11-27/"
+
 checks:
-  - id: R1
-    what: "<there is no Lean development to rerun; a rerun cycle here would be a formalization claim; see EG1>"
-    prediction: ""
+  R1: "lake exe cache get && lake build (default target Erdos1133) exits 0 with no errors; warnings are counted and recorded."
+  R2: "Escape hatches in the repository's own .lean sources (outside .lake): zero occurrences of the tactic or keyword sorry, admit, axiom, native_decide, unsafe; a pre-registration scan found two matches of the word admit in docstring prose and nothing else, which R2 confirms or corrects after the build."
+  R3: "lake env lean on a registrar-written file printing #print axioms for Erdos1133.erdos_1133 and Erdos1133.erdos_1133_with_threshold: each exactly [propext, Classical.choice, Quot.sound]."
+  R4: "Statement identity: a registrar-written file states formal-conjectures' erdos_1133 verbatim (the Challenge_1133 text) as an example and closes it with ; it compiles. Separately, the whitespace-normalised statement text of Erdos1133.erdos_1133 in Erdos1133/Main.lean is compared to formal-conjectures' text with ↦ and => treated as the same token; differences are listed."
+  R5: "The author's own Check.lean runs clean under lake env lean (the author's check reproduced; R3 and R4 are the registrar's independent versions of it)."
+
+predictions:
+  R1: "pass; 20 to 90 minutes including the Mathlib cache download; peak memory under 24 GB"
+  R2: "pass: 0 escape hatches"
+  R3: "pass: the standard three, both endpoints"
+  R4: "pass: the example compiles; the normalised texts differ only in whitespace and the lambda arrow"
+  R5: "pass"
+
+standing_consequences:
+  all_pass: "EG1 resolves (resolved_learned): a formal deduction of the third-party statement exists and was rerun independently. A finding is filed: the Erdős 1133 statement has a kernel-checked proof on the standard axioms, by a formalizer who is not the claimant, rerun here. EG2 unchanged. A new gap opens: whether the formalization's route corresponds to Yang's written proof is unread (the formalizer cites two written sources)."
+  R1_fail: "EG1 stays open; the failure is recorded with its log; the formalization is recorded as a candidate that did not build here."
+  R2_or_R3_fail: "EG1 stays open; an escape hatch or a non-standard axiom is named."
+  R4_fail: "EG1 stays open and the statement difference is recorded exactly; a candidate that proves a different statement is not a deduction of this one."
+
+not_settled_by_this_cycle: "EG2 (no independent mathematician has read Yang's proof); whether the formalization follows Yang's route; whether the reused Erdős 1152 modules are what their source repository holds (recorded by hash, not judged)."
