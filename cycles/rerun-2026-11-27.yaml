@@ -1,0 +1,56 @@
+# Cycle file; never edited after merge.
+kind: rerun
+cycle: rerun-2026-11-27
+dated: '2026-11-27'
+by: Nervous Machine (Heidi Bennett; Claude Fable 5.1 as registrar and operator)
+preregistered:
+  question: Does peilinliu66-dev's Lean formalization of Erdős 1133 build at its pinned commit on an independent machine
+    with no escape hatches, do its endpoints rest on the standard three axioms only, and is its main theorem's statement
+    identical to formal-conjectures' statement of the problem?
+  rule: checks R1 to R5 as registered in prereg_rerun.yaml (sha256 958af23f…, registered 2026-11-27T02:15:02Z, before
+    the run started at 02:15:39Z); misses recorded; amendment A1 restates one registered wording that lost a term to
+    shell quoting and records the results
+  predictions: [R1, R2, R3, R4, R5]
+  commit: prereg_rerun.yaml
+  results:
+  - cycles/rerun-2026-11-27/progress.log
+  - cycles/rerun-2026-11-27/R1_build.log
+  - cycles/rerun-2026-11-27/R1_build.time
+  - cycles/rerun-2026-11-27/R2_escape_hatches.log
+  - cycles/rerun-2026-11-27/R3R4_compare.log
+  - cycles/rerun-2026-11-27/R4_text_compare.log
+  - cycles/rerun-2026-11-27/R5_check.log
+  - cycles/rerun-2026-11-27/MANIFEST.sha256
+  - cycles/rerun-2026-11-27/NM_Compare.lean
+  - cycles/rerun-2026-11-27/run_rerun.sh
+  before_data: true
+environment: 'Lima VM primegaps (Linux) on Heidi Bennett''s Mac; repository cloned at 83ab7d38a4abbdfc1c9509cfbb7b49514cca217e
+  under ~/untrusted/erdos1133/repo; leanprover/lean4:v4.33.0 from lean-toolchain; Mathlib db584cd6 from lakefile.toml via
+  lake exe cache get; nothing from the repository ran on the host'
+outcome:
+  verdict: confirmed
+  results_text: "| id | check | prediction | outcome | wall |\n|---|---|---|---|---|\n| R1 | lake exe cache get && lake build | pass, 20–90 min, < 24 GB | pass: rc 0, 8749 jobs, 0 errors, 38 linter warnings, peak RSS 7.36 GB | 1:22 cache + 0:52 build |\n| R2 | escape hatches in the repository's .lean sources | 0 | 0 (two matches are the word admit in docstrings) | |\n| R3 | #print axioms, both endpoints | standard three | propext, Classical.choice, Quot.sound for erdos_1133 and erdos_1133_with_threshold | 0:03 |\n| R4 | formal-conjectures' statement verbatim, closed by Erdos1133.erdos_1133 | compiles; texts differ only in whitespace and the arrow | compiles; identical after normalisation | 0:03 |\n| R5 | the author's Check.lean | pass | pass; standard three for all four theorems it names | 0:03 |"
+  numbers:
+    checks_passed: 5 of 5
+    build_rc: 0
+    build_errors: 0
+    build_warnings: 38
+    build_wall_seconds: 52
+    cache_wall_seconds: 82
+    peak_rss_gb: 7.36
+    escape_hatches: 0
+    axioms: propext, Classical.choice, Quot.sound
+    statement_identical_to_formal_conjectures: true
+    source_files_hashed: 52
+  misses:
+  - R1 wall time predicted 20 to 90 minutes; the whole run took under three minutes because the Mathlib cache for db584cd6 downloaded in 82 seconds and the project is 49 files
+spoken: 'The Lean formalization of Erdős 1133 by peilinliu66-dev builds here from its pinned commit in under a minute, with
+  no escape hatch in its source, and its main theorem rests on the three standard axioms. Its statement is
+  formal-conjectures'' statement of the problem, word for word after whitespace. Three parties have now checked it: the
+  formalizer, a machine library that took it in, and this record. What it establishes is the statement; whether its
+  route is Yang''s is a reading nobody has done.'
+finding_ids:
+- F1
+gap_ids:
+- EG1
+- EG3

@@ -1,0 +1,48 @@
+# Cycle file; never edited after merge.
+kind: replay
+cycle: external-2026-11-26-formalization
+dated: '2026-11-26'
+by: null
+provenance:
+  source: 'public repositories read 2026-11-26/27 UTC: github.com/peilinliu66-dev/jsp940-erdos1133-formalization (commit
+    83ab7d38a4abbdfc1c9509cfbb7b49514cca217e, 2026-09-28, Apache-2.0); github.com/competemath/tengoku, directory
+    Tengoku/Jsp940Erdos1133Formalization (intake commit 2534bbee, 2026-11-20, "325 verified theorems in 48 files"); the
+    README, STATEMENT_CORRESPONDENCE.md, Check.lean, lakefile.toml and REUSED_MODULES.json of the source repository'
+preregistered:
+  question: What does the public record show about formal deductions of the Erdős 1133 statement today?
+  rule: status read from the public repositories, pinned by commit; no new checking by Nervous Machine in this cycle
+  predictions: []
+  commit: null
+  before_data: false
+outcome:
+  verdict: admitted
+  numbers:
+    external:
+      formalization:
+        who: peilinliu66-dev, "with Codex AI assistance"; not the claimant
+        repository: github.com/peilinliu66-dev/jsp940-erdos1133-formalization
+        commit: 83ab7d38a4abbdfc1c9509cfbb7b49514cca217e
+        dated: '2026-09-28'
+        licence: Apache-2.0
+        toolchain: leanprover/lean4:v4.33.0; Mathlib db584cd6
+        size: 49 Lean files, 7,506 lines; 19 modules reused from the author's Erdős 1152 repository at 5f77404a
+        endpoint: Erdos1133.erdos_1133, stated in the repository in the same words as formal-conjectures' erdos_1133; also
+          erdos_1133_with_threshold with ε = 1/(8k²) and n ≥ 4k²
+        claimed_axioms: propext, Classical.choice, Quot.sound (README; Check.lean prints them)
+        sources_named: Yang's manuscript at JiaqiYang-Fdu/erdos1133 8c3b428f (the artifact this record pins); an unsigned
+          ulam.ai draft of 2026-04-29; Olevskii–Ulanovskii (2018), stated in the README as proved in Lean rather than
+          assumed
+        found_by: the registrar of DEBRIEF-math-rooms during a target scan on 2026-11-26, via a GitHub code search for
+          Erdos1133 that returned tengoku's intake directory
+      library_intake:
+        who: competemath/tengoku
+        dated: '2026-11-20'
+        what: the formalization ingested as a factory bundle; manifest lists each theorem with toolchain
+          leanprover/lean4:v4.34.0-rc2 and a via field (equal or entails)
+spoken: 'A complete Lean formalization of the Erdős 1133 statement has been public since 28 September 2026, by a
+  formalizer who is not the claimant, built with Codex, on the standard axioms by its own check, and a machine library
+  took it in on 20 November. Nobody had filed it on this record. It is recorded here as found; its rerun is the next
+  cycle, registered separately. It is a deduction of the statement, not a reading of the claimant''s proof.'
+finding_ids: []
+gap_ids:
+- EG1

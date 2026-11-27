@@ -182,9 +182,173 @@
    "spoken": "What other registries showed on 2026-11-17. Palomar: no entry found. DeepMind formal-conjectures: main statement marked solved, with no formal proof linked. erdosproblems.com: status open. None of these is a named human reading of the statement.",
    "finding_ids": [],
    "gap_ids": []
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "mission_id": "erdos1133-2026-11",
+   "pod": "DEBRIEF-math-erdos1133",
+   "created_by": "contributed cycle (merge_cycles.py)",
+   "created_at": "2026-11-27T02:20:23Z",
+   "provenance": {
+    "source": "public repositories read 2026-11-26/27 UTC: github.com/peilinliu66-dev/jsp940-erdos1133-formalization (commit 83ab7d38a4abbdfc1c9509cfbb7b49514cca217e, 2026-09-28, Apache-2.0); github.com/competemath/tengoku, directory Tengoku/Jsp940Erdos1133Formalization (intake commit 2534bbee, 2026-11-20, \"325 verified theorems in 48 files\"); the README, STATEMENT_CORRESPONDENCE.md, Check.lean, lakefile.toml and REUSED_MODULES.json of the source repository"
+   },
+   "audience": "briefing",
+   "kind": "replay",
+   "cycle": "external-2026-11-26-formalization",
+   "dated": "2026-11-26",
+   "by": null,
+   "preregistered": {
+    "question": "What does the public record show about formal deductions of the Erdős 1133 statement today?",
+    "rule": "status read from the public repositories, pinned by commit; no new checking by Nervous Machine in this cycle",
+    "predictions": [],
+    "commit": null,
+    "before_data": false
+   },
+   "outcome": {
+    "verdict": "admitted",
+    "numbers": {
+     "external": {
+      "formalization": {
+       "who": "peilinliu66-dev, \"with Codex AI assistance\"; not the claimant",
+       "repository": "github.com/peilinliu66-dev/jsp940-erdos1133-formalization",
+       "commit": "83ab7d38a4abbdfc1c9509cfbb7b49514cca217e",
+       "dated": "2026-09-28",
+       "licence": "Apache-2.0",
+       "toolchain": "leanprover/lean4:v4.33.0; Mathlib db584cd6",
+       "size": "49 Lean files, 7,506 lines; 19 modules reused from the author's Erdős 1152 repository at 5f77404a",
+       "endpoint": "Erdos1133.erdos_1133, stated in the repository in the same words as formal-conjectures' erdos_1133; also erdos_1133_with_threshold with ε = 1/(8k²) and n ≥ 4k²",
+       "claimed_axioms": "propext, Classical.choice, Quot.sound (README; Check.lean prints them)",
+       "sources_named": "Yang's manuscript at JiaqiYang-Fdu/erdos1133 8c3b428f (the artifact this record pins); an unsigned ulam.ai draft of 2026-04-29; Olevskii–Ulanovskii (2018), stated in the README as proved in Lean rather than assumed",
+       "found_by": "the registrar of DEBRIEF-math-rooms during a target scan on 2026-11-26, via a GitHub code search for Erdos1133 that returned tengoku's intake directory"
+      },
+      "library_intake": {
+       "who": "competemath/tengoku",
+       "dated": "2026-11-20",
+       "what": "the formalization ingested as a factory bundle; manifest lists each theorem with toolchain leanprover/lean4:v4.34.0-rc2 and a via field (equal or entails)"
+      }
+     }
+    }
+   },
+   "spoken": "A complete Lean formalization of the Erdős 1133 statement has been public since 28 September 2026, by a formalizer who is not the claimant, built with Codex, on the standard axioms by its own check, and a machine library took it in on 20 November. Nobody had filed it on this record. It is recorded here as found; its rerun is the next cycle, registered separately. It is a deduction of the statement, not a reading of the claimant's proof.",
+   "finding_ids": [],
+   "gap_ids": [
+    "EG1"
+   ]
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "mission_id": "erdos1133-2026-11",
+   "pod": "DEBRIEF-math-erdos1133",
+   "created_by": "contributed cycle (merge_cycles.py)",
+   "created_at": "2026-11-27T02:20:23Z",
+   "provenance": {
+    "source": "contributed cycle file rerun-2026-11-27.yaml"
+   },
+   "audience": "briefing",
+   "kind": "rerun",
+   "cycle": "rerun-2026-11-27",
+   "dated": "2026-11-27",
+   "by": "Nervous Machine (Heidi Bennett; Claude Fable 5.1 as registrar and operator)",
+   "preregistered": {
+    "question": "Does peilinliu66-dev's Lean formalization of Erdős 1133 build at its pinned commit on an independent machine with no escape hatches, do its endpoints rest on the standard three axioms only, and is its main theorem's statement identical to formal-conjectures' statement of the problem?",
+    "rule": "checks R1 to R5 as registered in prereg_rerun.yaml (sha256 958af23f…, registered 2026-11-27T02:15:02Z, before the run started at 02:15:39Z); misses recorded; amendment A1 restates one registered wording that lost a term to shell quoting and records the results",
+    "predictions": [
+     "R1",
+     "R2",
+     "R3",
+     "R4",
+     "R5"
+    ],
+    "commit": "prereg_rerun.yaml",
+    "results": [
+     "cycles/rerun-2026-11-27/progress.log",
+     "cycles/rerun-2026-11-27/R1_build.log",
+     "cycles/rerun-2026-11-27/R1_build.time",
+     "cycles/rerun-2026-11-27/R2_escape_hatches.log",
+     "cycles/rerun-2026-11-27/R3R4_compare.log",
+     "cycles/rerun-2026-11-27/R4_text_compare.log",
+     "cycles/rerun-2026-11-27/R5_check.log",
+     "cycles/rerun-2026-11-27/MANIFEST.sha256",
+     "cycles/rerun-2026-11-27/NM_Compare.lean",
+     "cycles/rerun-2026-11-27/run_rerun.sh"
+    ],
+    "before_data": true
+   },
+   "environment": "Lima VM primegaps (Linux) on Heidi Bennett's Mac; repository cloned at 83ab7d38a4abbdfc1c9509cfbb7b49514cca217e under ~/untrusted/erdos1133/repo; leanprover/lean4:v4.33.0 from lean-toolchain; Mathlib db584cd6 from lakefile.toml via lake exe cache get; nothing from the repository ran on the host",
+   "outcome": {
+    "verdict": "confirmed",
+    "results_text": "| id | check | prediction | outcome | wall |\n|---|---|---|---|---|\n| R1 | lake exe cache get && lake build | pass, 20–90 min, < 24 GB | pass: rc 0, 8749 jobs, 0 errors, 38 linter warnings, peak RSS 7.36 GB | 1:22 cache + 0:52 build |\n| R2 | escape hatches in the repository's .lean sources | 0 | 0 (two matches are the word admit in docstrings) | |\n| R3 | #print axioms, both endpoints | standard three | propext, Classical.choice, Quot.sound for erdos_1133 and erdos_1133_with_threshold | 0:03 |\n| R4 | formal-conjectures' statement verbatim, closed by Erdos1133.erdos_1133 | compiles; texts differ only in whitespace and the arrow | compiles; identical after normalisation | 0:03 |\n| R5 | the author's Check.lean | pass | pass; standard three for all four theorems it names | 0:03 |",
+    "numbers": {
+     "checks_passed": "5 of 5",
+     "build_rc": 0,
+     "build_errors": 0,
+     "build_warnings": 38,
+     "build_wall_seconds": 52,
+     "cache_wall_seconds": 82,
+     "peak_rss_gb": 7.36,
+     "escape_hatches": 0,
+     "axioms": "propext, Classical.choice, Quot.sound",
+     "statement_identical_to_formal_conjectures": true,
+     "source_files_hashed": 52
+    },
+    "misses": [
+     "R1 wall time predicted 20 to 90 minutes; the whole run took under three minutes because the Mathlib cache for db584cd6 downloaded in 82 seconds and the project is 49 files"
+    ]
+   },
+   "spoken": "The Lean formalization of Erdős 1133 by peilinliu66-dev builds here from its pinned commit in under a minute, with no escape hatch in its source, and its main theorem rests on the three standard axioms. Its statement is formal-conjectures' statement of the problem, word for word after whitespace. Three parties have now checked it: the formalizer, a machine library that took it in, and this record. What it establishes is the statement; whether its route is Yang's is a reading nobody has done.",
+   "finding_ids": [
+    "F1"
+   ],
+   "gap_ids": [
+    "EG1",
+    "EG3"
+   ]
   }
  ],
- "findings": [],
+ "findings": [
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "hand-written from DEBRIEF/templates with Claude Fable 5.1 as the operating agent",
+   "created_at": "2026-11-27T02:20:00Z",
+   "mission_id": "erdos1133-2026-11",
+   "pod": "DEBRIEF-math-erdos1133",
+   "provenance": {
+    "source": "the record's registration prereg_rerun.yaml (sha256 958af23fc835c9d4c0ca37af08a8f412e036472bfcfbaec5afe7bc9e2ab6caf6, registered 2026-11-27T02:15:02Z) and the committed logs under cycles/rerun-2026-11-27/"
+   },
+   "audience": "briefing",
+   "finding_id": "F1",
+   "kind": "learned",
+   "spoken": "The statement of Erdős 1133 as formal-conjectures writes it has a kernel-checked proof on the three standard axioms: peilinliu66-dev's Lean formalization of 28 September 2026, which this record rebuilt from its pinned commit on an independent machine with no escape hatch in its source and its statement identical, word for word, to the third-party statement. The formalizer is not the claimant, and this is a deduction of the statement, not a reading of Yang's written proof.",
+   "evidence": {
+    "numbers": {
+     "build": "rc 0, 8749 jobs, 0 errors, 38 linter warnings, 52 s, peak RSS 7.36 GB",
+     "escape_hatches": 0,
+     "axioms": "propext, Classical.choice, Quot.sound (both endpoints; the author's Check.lean agrees)",
+     "statement": "identical to formal-conjectures' erdos_1133 after whitespace normalisation; the verbatim statement closes by the endpoint",
+     "source": "49 Lean files, 7,506 lines, 19 reused from the author's Erdős 1152 repository, all hashed in MANIFEST.sha256"
+    },
+    "cycles": [
+     "external-2026-11-26-formalization",
+     "rerun-2026-11-27"
+    ],
+    "confirmed_by": [
+     "the formalizer's own Check.lean (2026-09-28, per README)",
+     "competemath/tengoku intake (2026-11-20)",
+     "this record's rerun in a VM, 2026-11-27, under a registration written first"
+    ]
+   },
+   "standing": {
+    "status": "certified",
+    "basis": "a formal deduction checked by its author's toolchain and rerun by a party independent of both the claimant and the formalizer, with the statement written by a third party, as EG1 asked; standard axioms only",
+    "note": "Certified is about the formal deduction of the statement. It says nothing about whether Yang's written argument is correct or whether the Lean route is Yang's; the formalizer names two written sources and its own analytic route (EG3). The human reading of Yang's proof (EG2) is untouched."
+   },
+   "certainty": {
+    "earned": true,
+    "how": "deterministic: the repository is pinned by commit and every source file by hash; anyone can rebuild it in under a minute from the Mathlib cache"
+   },
+   "edge_refs": []
+  }
+ ],
  "gaps": [
   {
    "schema_version": "nm-debrief-v1",
@@ -198,10 +362,18 @@
    "audience": "briefing",
    "gap_id": "EG1",
    "title": "No formal deduction exists for the claimed proof",
-   "status": "proposed",
+   "status": "resolved_learned",
    "opened_cycle": 0,
    "priority": 1,
-   "history": [],
+   "history": [
+    {
+     "cycle": "rerun-2026-11-27",
+     "dated": "2026-11-27",
+     "hypothesis": "a complete Lean formalization of the statement exists (found 2026-11-26) and builds here with standard axioms and the third-party statement",
+     "before_data": true,
+     "result": "yes: built in 52 s from the pinned commit, 0 escape hatches, standard three axioms, statement identical to formal-conjectures'; the formalizer is peilinliu66-dev with Codex, not the claimant; EG1 resolves and EG3 opens on route correspondence"
+    }
+   ],
    "closes_with": [
     {
      "what": "a Lean formalization of the main theorem, by the claimant or anyone else, with the statement written by a third party",
@@ -215,7 +387,7 @@
     "spoken": "A formalization of the main theorem, with the statement written by someone other than the prover."
    },
    "expected_signal": "a claim cycle pinning a Lean development, which opens the rerun and semantic gaps",
-   "resolution_by": "none registered"
+   "resolution_by": "rerun-2026-11-27"
   },
   {
    "schema_version": "nm-debrief-v1",
@@ -252,6 +424,37 @@
     "spoken": "Someone in the field reads it and says, under their name, what holds and what does not."
    },
    "expected_signal": "a signed or refused read cycle; a dated referee report",
+   "resolution_by": "none registered"
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-27T02:20:00Z",
+   "mission_id": "erdos1133-2026-11",
+   "pod": "DEBRIEF-math-erdos1133",
+   "provenance": {
+    "source": "public record to 2026-11-14: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "gap_id": "EG3",
+   "title": "Whether the Lean formalization's route corresponds to Yang's written proof is unread; the formalizer names two written sources and its own analytic route",
+   "status": "proposed",
+   "opened_cycle": "rerun-2026-11-27",
+   "priority": 2,
+   "history": [],
+   "closes_with": [
+    {
+     "what": "a reading that maps the formalization's modules (finite trigonometric obstruction, periodization, polynomial pullback, grouping) to Yang's Theorem 2.1, Lemma 3.2 and Section 4, signing or refusing each correspondence",
+     "kind": "read",
+     "external": true,
+     "who_could_act": "a mathematician in approximation theory, or the formalizer"
+    }
+   ],
+   "spoken": "The statement has a kernel-checked Lean deduction. Whether the deduction in Lean follows Yang's proof, or a different route built from an unsigned April draft and Olevskii–Ulanovskii, nobody has read.",
+   "ask": {
+    "spoken": "Read the Lean route against Yang's sections and say which steps correspond."
+   },
+   "expected_signal": "a read cycle on this record",
    "resolution_by": "none registered"
   }
  ],

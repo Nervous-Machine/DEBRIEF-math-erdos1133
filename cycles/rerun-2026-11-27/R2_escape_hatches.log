@@ -1,0 +1,3 @@
+./Erdos1133/FiniteTrigCore.lean:12:/-- Arbitrary nodes admit bounded real data that cannot be interpolated with
+./Erdos1133/ExactInterpolation.lean:202:/-- In particular, unit data admit an exact interpolant of norm at most
+matches=2

@@ -1,0 +1,28 @@
+Erdos1133.erdos_1133 (C : ℝ) :
+  C > 0 →
+    ∃ ε > 0,
+      ∀ᶠ (n : ℕ) in atTop,
+        ∀ (x : Fin n → ↑(Icc (-1) 1)),
+          ∃ y,
+            ∀ (P : Polynomial ℝ),
+              ↑P.natDegree < (1 + ε) * ↑n →
+                ↑{i | Polynomial.eval (↑(x i)) P = ↑(y i)}.card ≥ (1 - ε) * ↑n →
+                  ∃ z ∈ Icc (-1) 1, |Polynomial.eval z P| > C
+Erdos1133.erdos_1133_with_threshold (C : ℝ) (hC : 0 < C) :
+  ∃ k,
+    2 ≤ k ∧
+      0 < Erdos1133.obstructionEpsilon k ∧
+        Erdos1133.obstructionEpsilon k < 1 ∧
+          ∀ (n : ℕ),
+            4 * k ^ 2 ≤ n →
+              ∀ (x : Fin n → ↑(Icc (-1) 1)),
+                ∃ y,
+                  ∀ (P : Polynomial ℝ),
+                    ↑P.natDegree < (1 + Erdos1133.obstructionEpsilon k) * ↑n →
+                      ↑{i | Polynomial.eval (↑(x i)) P = ↑(y i)}.card ≥ (1 - Erdos1133.obstructionEpsilon k) * ↑n →
+                        ∃ z ∈ Icc (-1) 1, |Polynomial.eval z P| > C
+'Erdos1133.erdos_1133' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1133.erdos_1133_with_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1133.finite_bernstein_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1133.finite_trig_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+rc=0

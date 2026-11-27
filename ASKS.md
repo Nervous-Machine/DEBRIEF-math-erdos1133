@@ -2,16 +2,6 @@
 
 Each open gap below is a place a contribution can land. A contribution is one cycle in this repository's ledger, under your name. How to contribute, and the templates: https://github.com/Nervous-Machine/DEBRIEF/blob/main/CONTRIBUTING.md
 
-## 1. No formal deduction exists for the claimed proof (ledger id EG1)
-
-The proof exists as a written argument only. There is no machine-checkable form of it, so nothing here can be settled by a rerun yet.
-
-Status: proposed.
-
-- **a Lean formalization of the main theorem, by the claimant or anyone else, with the statement written by a third party** — contribution kind: claim (a formalization or a new claim); who could act: the claimant, or anyone who formalizes it.
-
-Signal expected: a claim cycle pinning a Lean development, which opens the rerun and semantic gaps. Resolution by: none registered.
-
 ## 2. No independent mathematician has reported reading the proof, and there is no referee report (ledger id EG2)
 
 The claim is listed on the problem's page, which states that appearing there is no guarantee of correctness and that nobody associated with the site has examined it. No independent reading is on the public record.
@@ -22,3 +12,13 @@ Status: proposed.
 - **a referee report or journal acceptance, recorded by date** — contribution kind: data; who could act: a journal; the record notes the date when it happens.
 
 Signal expected: a signed or refused read cycle; a dated referee report. Resolution by: none registered.
+
+## 2. Whether the Lean formalization's route corresponds to Yang's written proof is unread; the formalizer names two written sources and its own analytic route (ledger id EG3)
+
+The statement has a kernel-checked Lean deduction. Whether the deduction in Lean follows Yang's proof, or a different route built from an unsigned April draft and Olevskii–Ulanovskii, nobody has read.
+
+Status: proposed.
+
+- **a reading that maps the formalization's modules (finite trigonometric obstruction, periodization, polynomial pullback, grouping) to Yang's Theorem 2.1, Lemma 3.2 and Section 4, signing or refusing each correspondence** — contribution kind: read; who could act: a mathematician in approximation theory, or the formalizer.
+
+Signal expected: a read cycle on this record. Resolution by: none registered.

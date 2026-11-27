@@ -1,0 +1,3 @@
+'Erdos1133.erdos_1133' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1133.erdos_1133_with_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+rc=0
