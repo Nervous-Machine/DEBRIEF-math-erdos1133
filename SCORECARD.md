@@ -22,6 +22,7 @@ Record quality: full ledger. Opened at tier zero: the claim and its artifacts ar
 | external-2026-11-17 | 2026-11-17 | None | replay | no | admitted |
 | external-2026-11-26-formalization | 2026-11-26 | None | replay | no | admitted |
 | rerun-2026-11-27 | 2026-11-27 | Nervous Machine (Heidi Bennett; Claude Fable 5.1 as registrar and operator) | rerun | yes | confirmed |
+| external-2026-11-28 | 2026-11-28 | None | replay | no | admitted |
 
 ## Gaps, in the order that would settle things fastest
 
